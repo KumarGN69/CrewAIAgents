@@ -1,0 +1,11 @@
+pip~=24.3.1
+attrs~=23.2.0
+distro~=1.9.0
+cryptography~=43.0.3
+pillow~=10.4.0
+tornado~=6.4.1
+Jinja2~=3.1.4
+filelock~=3.15.4
+crewai~=0.76.9
+python-dotenv~=1.0.1
+crewai-tools~=0.13.4
