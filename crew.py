@@ -1,4 +1,5 @@
 from crewai import Crew, Process
+from crewai.memory import EntityMemory
 from tasks import research_task, writer_task
 from agents import blog_reseacher, blog_writer
 
@@ -10,8 +11,13 @@ crew = Crew(
     memory = True,
     cache = True,
     max_rpm= 100,
-    share_crew= True
-)
+    share_crew= True,
+    memory_args={
+        "short_term": None
+        }
+    
+    )
+
 
 ##start the execution procees with enhanced feedback configuration
 result = crew.kickoff(inputs={'topic':'Top stories'})
