@@ -2,3 +2,7 @@
 .venv/
 .env
 *.md
+chroma_db /
+db /
+__pycache__ /
+
