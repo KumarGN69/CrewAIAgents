@@ -40,7 +40,8 @@ blog_reseacher = Agent(
     memory=True,
     tools=[scrape_tool],
     allow_delegation=True,
-    llm=LLM(model="ollama/llama3.2", base_url="http://localhost:11434")
+    llm=LLM(model="ollama/llama3.2", base_url="http://localhost:11434"),
+     max_iter =2
 )
 
 
@@ -59,7 +60,6 @@ crew = Crew(
     memory = True,
     cache = True,
     max_rpm= 1,
-    max_iter =2,
     share_crew= True,
     memory_args={
         "short_term": None

@@ -1,13 +1,12 @@
 from crewai import Crew, Agent, Task, Process,LLM
-from langchain_community.llms import Ollama
+# from langchain_community.llms import ollama
 from langchain_community.vectorstores import Chroma
-from langchain_ollama import OllamaEmbeddings
-from sentence_transformers import SentenceTransformer
+from langchain_community.embeddings import OllamaEmbeddings
+# from sentence_transformers import SentenceTransformer
 from langchain_community.document_loaders import UnstructuredURLLoader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
-from langchain.agents import Tool
-from crewai_tools import tool
-
+# from langchain.agents import Tool
+from crewai_tools import Tool
 
 import os
 from dotenv import load_dotenv
@@ -26,8 +25,8 @@ texts = text_splitter.split_documents(data)
 # print(texts)
 
 #initialize embeddings
-model_name = "nomic-embed-text"
-embeddings = OllamaEmbeddings(model=model_name)
+MODEL_NAME = "nomic-embed-text"
+embeddings = OllamaEmbeddings(model= MODEL_NAME)
 
 # Create and Persist Vector Database
 db = Chroma.from_documents(texts, embeddings, persist_directory="./chroma_db")

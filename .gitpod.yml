@@ -7,7 +7,7 @@ tasks:
     command: ollama serve && ollama run llama3.2  
   
   - name: install and set up the environment  
-    init: pip install gradio && pip install crewai && pip install crewai[tools] && pip install ollama && pip install langchain-ollama && pip install python-dotenv && pip install --upgrade pip && pip install langchain && pip install streamlit && pip install unstructured && pip install sentence_transformers
+    init: pip install gradio && pip install crewai && pip install crewai-tools && pip install langchain-community && pip install python-dotenv && pip install --upgrade pip && pip install langchain && pip install streamlit && pip install unstructured && pip install sentence-transformers && pip install langchain-community
 
  
 
