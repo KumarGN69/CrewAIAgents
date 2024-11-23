@@ -1,5 +1,6 @@
 from crewai import Crew, Process
 from crewai.memory import EntityMemory
+from crewai import Agent
 from tasks import research_task, writer_task
 from agents import blog_reseacher, blog_writer
 

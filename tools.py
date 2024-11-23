@@ -18,7 +18,7 @@ yt_tool = YoutubeChannelSearchTool(youtube_channel_handle="@krishnaik06",
     )
 )
 
-scrape_tool = tool = ScrapeWebsiteTool(website_url='https://news.google.com/home?hl=en-US&gl=US&ceid=US:en',
+scrape_tool = ScrapeWebsiteTool(website_url='https://news.google.com/home?hl=en-US&gl=US&ceid=US:en',
     config=dict(
         llm=dict(
             provider="ollama",

@@ -1,7 +1,8 @@
-from crewai import Agent, LLM
-from tools import yt_tool, scrape_tool
 import os
 from dotenv import load_dotenv
+from crewai import Agent, LLM
+from tools import yt_tool, scrape_tool
+
 
 load_dotenv()
 
