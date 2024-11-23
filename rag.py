@@ -5,7 +5,7 @@ from langchain_community.embeddings import OllamaEmbeddings
 # from sentence_transformers import SentenceTransformer
 from langchain_community.document_loaders import UnstructuredURLLoader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
-# from langchain.agents import Tool
+from langchain.agents import tool
 from crewai_tools import Tool
 
 import os
