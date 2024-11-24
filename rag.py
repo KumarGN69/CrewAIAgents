@@ -6,7 +6,7 @@ from langchain_community.embeddings import OllamaEmbeddings
 from langchain_community.document_loaders import UnstructuredURLLoader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain.agents import tool
-from crewai_tools import Tool
+from crewai.tools import tool
 
 import os
 from dotenv import load_dotenv
