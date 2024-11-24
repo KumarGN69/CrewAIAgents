@@ -35,7 +35,7 @@ db.persist()
 # Define Retriever from Vector Store
 retriever = db.as_retriever()
 
-@tool
+@tool("retrieve_docs")
 def retrieve_docs():
     """Useful to retrive docs from vectordb together."""
     return retriever.get_relevant_documents()
