@@ -1,9 +1,9 @@
 from crewai import Crew, Agent, Task, Process,LLM
 # from langchain_community.llms import ollama
 from langchain_community.vectorstores import Chroma
-from langchain_community.embeddings import OllamaEmbeddings
+from langchain_ollama import OllamaEmbeddings
 # from sentence_transformers import SentenceTransformer
-from langchain_community.document_loaders import UnstructuredURLLoader
+from langchain_community.document_loaders.url import UnstructuredURLLoader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain.agents import tool
 from crewai.tools import tool
