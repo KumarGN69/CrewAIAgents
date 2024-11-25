@@ -41,14 +41,14 @@ blog_reseacher = Agent(
     tools=[scrape_tool],
     allow_delegation=True,
     llm=LLM(model="ollama/llama3.2", base_url="http://localhost:11434"),
-     max_iter =2
+    max_iter =2
 )
 
 
 
 research_task = Task(
     description = "Identify details on the topic {topic}, Get detailed information from the website",
-    expected_output= "A comprehensive 1 paragraphs of long report based on the {topic} and create the content for the summary",
+    expected_output= "A bulleted list long report based on the {topic} and create the content for the summary",
     tools=[scrape_tool],
     agent= blog_reseacher
 )
@@ -68,6 +68,6 @@ crew = Crew(
 
 
 ##start the execution procees with enhanced feedback configuration
-result = crew.kickoff(inputs={'topic':'How to create and use custom tools'})
+result = crew.kickoff(inputs={'topic':'How to implement Custom Tools'})
 
 print(result)
