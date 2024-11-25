@@ -36,9 +36,9 @@ db.persist()
 retriever = db.as_retriever()
 
 @tool("retrieve_docs")
-def retrieve_docs():
+def retrieve_docs(query:str) -> str:
     """Useful to retrive docs from vectordb together."""
-    return retriever.get_relevant_documents()
+    return retriever.get_relevant_documents(query)
 
 #define agents and tasks
 
