@@ -4,7 +4,7 @@ tasks:
   - name: Ollama Install and start service
     before: echo "Hi from Terminal 2"
     init: curl -fsSL https://ollama.com/install.sh  | sh
-    command: ollama pull nomic-embed-text && ollama run llama3.2  
+    command: ollama serve && ollama pull nomic-embed-text && ollama run llama3.2  
   
   - name: install and set up the environment  
     init: pip install crewai && pip install crewai-tools && pip install langchain-community && pip install python-dotenv && pip install --upgrade pip && pip install langchain-ollama && pip install streamlit && pip install unstructured
