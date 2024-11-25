@@ -10,8 +10,6 @@ tasks:
     init: pip install crewai && pip install crewai-tools && pip install langchain-community && pip install python-dotenv && pip install --upgrade pip && pip install langchain-ollama && pip install streamlit && pip install unstructured
 
  
-
-
 # List the ports to expose. Learn more: https://www.gitpod.io/docs/configure/workspaces/ports
 ports:
   - name: Frontend
